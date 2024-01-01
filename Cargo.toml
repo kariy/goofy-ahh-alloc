@@ -1,15 +1,18 @@
 [package]
 edition = "2021"
-name = "mdbxalloc"
+name = "goofy-ahh-alloc"
 readme = "README.md"
-repository = "https://github.com/kariy/mdbxalloc"
+repository = "https://github.com/kariy/goofy-ahh-alloc"
 version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+dashmap = "5.5.3"
+lazy_static = "1.4.0"
+memmap2 = "0.9.3"
+stupidalloc = "0.2.1"
 
-[dependencies.libmdbx]
-git = "https://github.com/paradigmxyz/reth.git"
-package = "reth-libmdbx"
-rev = "b34b0d3"
+
+[dev-dependencies]
+criterion = "0.5.1"
